@@ -7,6 +7,8 @@
 :root {
   --footer-color: #2f303a;
   --title-mailing: #2196f3;
+  --time-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --time-duration: 250ms;
 }
 li {
   list-style-type: none;
@@ -46,8 +48,8 @@ li {
 }
 .nav-link {
   transition-property: color, border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--time-function);
   padding-bottom: 34px;
 }
 .nav-link:focus,
@@ -100,12 +102,16 @@ nav a {
   align-items: center;
   cursor: pointer;
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--time-function);
 }
 .number-site:focus,
 .number-site:hover {
   color: #2196f3;
+}
+.active-link {
+  border-bottom: 4px solid var(--title-mailing);
+  color: var(--title-mailing);
 }
 .icon-letter {
   fill: #757575;
@@ -140,8 +146,8 @@ nav a {
   margin-bottom: 50px;
   cursor: pointer;
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--time-function);
 }
 .navigation-link:focus,
 .navigation-link:hover {
@@ -149,8 +155,8 @@ nav a {
 }
 .navigation-link {
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--time-function);
 }
 .navigation-link:focus,
 .navigation-item:hover a {
@@ -178,8 +184,8 @@ nav a {
   margin-right: 30px;
   cursor: pointer;
   transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--time-function);
 }
 .image-container {
   position: relative;
@@ -203,8 +209,8 @@ nav a {
   background-color: rgba(33, 150, 243, 0.9);
   border-radius: 5px;
   transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--time-function);
 }
 .image-container:hover .hover-text-container {
   transform: translateY(-100%);
@@ -311,8 +317,8 @@ footer p {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--time-function);
 }
 .bottom-social-link:focus,
 .bottom-social-link:hover {
